@@ -49,13 +49,13 @@ const RewardUser = ({ userId, onRewardSuccess }) => {
         onChange={(e) => setAmount(e.target.value)}
         placeholder="금액을 입력하세요"
       />
-      <button onClick={handleSubmit}>제출</button>
+      <button onClick={handleSubmit}>유저 보상</button>
 
       {/* 모달 창 */}
       {showModal && (
         <div className="modal">
           <div className="modal-content">
-            <p>ㄹㅇ로 {amount} 보상하시겠습니까?</p>
+            <p>정말로 {amount}을 보상하시겠습니까?</p>
             <button onClick={handleConfirm}>확인</button>
             <button onClick={handleCancel}>취소</button>
           </div>

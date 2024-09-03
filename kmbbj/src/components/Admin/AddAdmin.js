@@ -31,10 +31,10 @@ const AddAdmin = ({ onSuccess }) => {
 
   return (
     <div className="add-admin-container">
-      <h3 className="add-admin-heading">Add New Admin</h3>
+      <h3 className="add-admin-heading">관리자 추가</h3>
       <form onSubmit={handleSignup} className="add-admin-form">
         <div className="form-group">
-          <label>Email</label>
+          <label>이메일</label>
           <input
             type="email"
             value={email}
@@ -44,7 +44,7 @@ const AddAdmin = ({ onSuccess }) => {
           />
         </div>
         <div className="form-group">
-          <label>Password</label>
+          <label>비밀번호</label>
           <input
             type="password"
             value={password}
@@ -54,7 +54,7 @@ const AddAdmin = ({ onSuccess }) => {
           />
         </div>
         <div className="form-group">
-          <label>Confirm Password</label>
+          <label>비밀번호 확인</label>
           <input
             type="password"
             value={passwordCheck}
@@ -64,7 +64,7 @@ const AddAdmin = ({ onSuccess }) => {
           />
         </div>
         {success && <div className="success-message">{success}</div>}
-        <button type="submit" className="submit-button">Add Admin</button>
+        <button type="submit" className="submit-button">추가</button>
       </form>
     </div>
   );

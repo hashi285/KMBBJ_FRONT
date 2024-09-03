@@ -35,20 +35,20 @@ const AdminList = () => {
 
   return (
     <div className="admin-list">
-      <h3>Admin Users</h3>
+      <h3>관리자 리스트</h3>
       <table>
         <thead>
           <tr>
-            <th>Email</th>
-            <th>Nickname</th>
+            <th>닉네임</th> {/* 닉네임이 이메일보다 앞에 오도록 수정 */}
+            <th>이메일</th> {/* 이메일을 뒤로 이동 */}
             <th>Is Admin</th>
           </tr>
         </thead>
         <tbody>
           {admins.map(admin => (
             <tr key={admin.id}>
-              <td>{admin.email}</td>
-              <td>{admin.nickname}</td>
+              <td>{admin.nickname}</td> {/* 닉네임을 첫 번째로 표시 */}
+              <td>{admin.email}</td> {/* 이메일을 두 번째로 표시 */}
               <td>{admin.authority === 'ROLE_ADMIN' ? 'Yes' : 'No'}</td>
             </tr>
           ))}
